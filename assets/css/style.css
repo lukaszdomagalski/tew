@@ -1,0 +1,111 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e5e5e5;
+    color: #3f3f3f;
+    font-size: 14px;
+    line-height: 24px;
+    background-image: url(../images/bg.png);
+}
+
+a {
+    color: #000088;
+}
+
+a:hover {
+    color: #880000;
+}
+
+#top {
+    background: #fffaae;
+    padding: 0 10px;
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+
+#header {
+    float: left;
+}
+
+#header h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+
+#topmenu {
+    float: right;
+}
+
+#topmenu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#topmenu li {
+    display: inline;
+    padding: 0 0 0 5px
+}
+
+#topmenu li a {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    padding: 10px 10px;
+    background: #35718F;
+    text-decoration: none;
+    color: #fff;
+}
+
+#topmenu li a:hover {
+    background: #eee;
+    color: #000;
+}
+
+#content {
+    width: 70%;
+    margin: 5px auto;
+    border-radius: 15px;
+    padding: 20px 20px 20px 20px;
+    background-image: url(../images/content.png);
+}
+
+#content h2 {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background: #fffaae;
+    padding: 10px;
+    font-weight: normal;
+    color: #585858;
+    letter-spacing: -1px;
+    font-weight: bold;
+    margin: 20px -10px 10px -10px;
+}
+
+#footer {
+
+    position: fixed;
+    height: 40px;
+    background: #993300;
+    bottom: 0;
+    background-image: url(../images/stripes.png);
+}
+
+#footer a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px dotted #fff;
+}
+
+#footer a:hover {
+    border-bottom: 1px dotted #ccc;
+}
+
