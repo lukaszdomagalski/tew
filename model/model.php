@@ -88,4 +88,6 @@ abstract class Model{
 
         return $data;
     }
+
+    abstract function insert(array $params);
 }

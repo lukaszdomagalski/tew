@@ -35,6 +35,12 @@ if (isset($_GET['task']) && $_GET['task'] == 'categories') {
     if (method_exists($ob, $_GET['action'])) {
         $ob->$_GET['action']();
     }
+} else if( isset($_GET['task']) && $_GET['task'] == 'user') {
+    require_once 'controller/user.php';
+    $ob = new UserController();
+    if (method_exists($ob, $_GET['action'])) {
+        $ob->$_GET['action']();
+    }
 } else {
     include 'controller/articles.php';
     $ob = new ArticlesController();

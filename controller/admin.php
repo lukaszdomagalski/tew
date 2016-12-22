@@ -10,13 +10,13 @@ require_once 'AbstractController.php';
  */
 class AdminController extends AbstractController
 {
-    const STUDENT_PANEL_URL = '?task=student&action=index';
+    const STUDENT_PANEL_URL = '?task=user&action=index';
 
     public function index()
     {
-//        if ($this->ifNotAdminRedirect(STUDENT_PANEL_URL) === true) {
-//            return;
-//        }
+        if ($this->ifNotAdminRedirect(self::STUDENT_PANEL_URL) === true) {
+            return;
+        }
         $this->loadView('admin')->index();
     }
 

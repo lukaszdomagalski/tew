@@ -31,10 +31,9 @@ class LoginController extends AbstractController
         ]);
 
         $_SESSION['user'] = $user[0];
-        if ($user[0]['is_admin'] == 1) {   //zmienić ifa na tego z pliku abstractcontroller
+
+        if(!$this->ifNotAdminRedirect('?task=user&action=index')) {
             $this->redirect('?task=admin&action=index');
-        } else {
-            $this->redirect();
         }
     }
 

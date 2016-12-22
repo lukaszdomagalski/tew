@@ -30,4 +30,9 @@ class UserModel extends Model
         }
         return $this->select(self::USER_DATABASE_TABLE_NAME, '*', $where);
     }
+
+    function insert(array $params)
+    {
+
+    }
 }
