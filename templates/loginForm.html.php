@@ -6,50 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script type="text/javascript" src="./assets/js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
     <link href="./assets/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 col-sm-9">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">TEW</a>
+<div class="container">
+    <div class="row vertical-offset-100">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row-fluid user-row">
+                        <img src="http://s11.postimg.org/7kzgji28v/logo_sm_2_mr_1.png" class="img-responsive"
+                             alt="Conxole Admin"/>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form accept-charset="UTF-8" role="form" class="form-signin" name="logowanie"
+                          action="?task=login&action=login" method="post">
+                        <fieldset>
+                            <legend><center>Logowanie</center></legend>
+                            <label class=" panel-login">
+                                <div class="login_result"></div>
+                            </label>
+                            <input class="form-control" placeholder="E-mail" id="email" type="email" name="email" required>
+                            <input class="form-control" placeholder="Hasło" id="password" type="password" name="password"
+                                   required>
+                            <br></br>
+                            <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Zaloguj"
+                                   name="zaloguj">
+                        </fieldset>
+                    </form>
                 </div>
             </div>
-        </div>
-    </div>
-</nav>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <center>
-                <form class="form-horizontal" name="logowanie" action="?task=login&action=login" method="post">
-                    <br><br><br>
-                    <fieldset>
-                        <legend>Logowanie</legend>
-                        <div class="form-group">
-                            <label for="inputEmail" class="col-md-4 control-label">Email</label>
-                            <div class="col-md-4">
-                                <input type="email" autofocus="autofocus" class="form-control" id="email"
-                                       name="email" placeholder="Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputPassword" class="col-md-4 control-label">Hasło</label>
-                            <div class="col-md-4">
-                                <input type="password" class="form-control" id="password" name="password"
-                                       placeholder="Hasło" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-4 col-md-offset-4">
-                                <button type="submit" name="zaloguj" class="btn btn-primary">Zaloguj</button>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </center>
         </div>
     </div>
 </div>

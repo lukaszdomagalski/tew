@@ -5,7 +5,7 @@ session_start();
 if (!isset($_SESSION['user'])) {
     require_once 'controller/login.php';
     $ob = new LoginController();
-    if ( isset($_GET['task']) &&  isset($_GET['action']) && $_GET['task'] == 'login' && $_GET['action'] == 'login') {
+    if (isset($_GET['task']) && isset($_GET['action']) && $_GET['task'] == 'login' && $_GET['action'] == 'login') {
         $ob->$_GET['action']();
         return;
     }
@@ -29,13 +29,13 @@ if (isset($_GET['task']) && $_GET['task'] == 'categories') {
     if (method_exists($ob, $_GET['action'])) {
         $ob->$_GET['action']();
     }
-} else if( isset($_GET['task']) && $_GET['task'] == 'admin') {
+} else if (isset($_GET['task']) && $_GET['task'] == 'admin') {
     require_once 'controller/admin.php';
     $ob = new AdminController();
     if (method_exists($ob, $_GET['action'])) {
         $ob->$_GET['action']();
     }
-} else if( isset($_GET['task']) && $_GET['task'] == 'user') {
+} else if (isset($_GET['task']) && $_GET['task'] == 'user') {
     require_once 'controller/user.php';
     $ob = new UserController();
     if (method_exists($ob, $_GET['action'])) {

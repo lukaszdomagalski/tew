@@ -92,10 +92,11 @@ a:hover {
 
 #footer {
 
-    position: fixed;
-    height: 40px;
-    background: #993300;
-    bottom: 0;
+    background: #4D606E;
+    color: #fff;
+    position:absolute;
+    bottom:0;
+    width:100%;
     background-image: url(../images/stripes.png);
 }
 

@@ -89,5 +89,25 @@ abstract class Model{
         return $data;
     }
 
-    abstract function insert(array $params);
+    function insert(array $params, $tableName)
+    {
+        $query = 'INSERT INTO ' . $tableName . '(';
+        $tail  = ' VALUES(';
+        $arraySize = count($params);
+        $i = 1;
+        foreach ($params as $key => $value) {
+            $query .= $key;
+            $tail .= '"' . htmlentities($value, ENT_QUOTES, 'UTF-8') . '"';
+            if ($arraySize > 1 && $i < $arraySize) {
+                $query .= ', ';
+                $tail .= ', ';
+            } else {
+                $query .= ')';
+                $tail .= ')';
+            }
+            ++$i;
+        }
+
+        return $this->pdo->query($query . $tail);
+    }
 }

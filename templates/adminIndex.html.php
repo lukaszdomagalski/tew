@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script type="text/javascript" src="./assets/js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
-    <link href="./assets/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -54,7 +55,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Użytkownicy<span
                                 class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Dodaj użytkownika</a></li>
+                        <li><a href="#registerUser" data-toggle="tab">Dodaj użytkownika</a></li>
                         <li class="divider"></li>
                         <li><a href="#">Usuń użytkownika</a></li>
                     </ul>
@@ -66,33 +67,29 @@
         </div>
 </nav>
 
+<?php if (!empty($_SESSION['errorMessage'])) : ?>
+    <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php
+        echo $_SESSION['errorMessage'];
+        unset($_SESSION['errorMessage']);
+        ?>
+    </div>
+<?php endif; ?>
+
+<?php if (!empty($_SESSION['successMessage'])) : ?>
+    <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php
+        echo $_SESSION['successMessage'];
+        unset($_SESSION['successMessage']);
+        ?>
+    </div>
+<?php endif; ?>
+
 <div id="content">
 
-    <h2>Nagłówek</h2>
-    <p>
-        Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący
-        tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie
-        znaczący tekst.
-    </p>
-    <p>
-        Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący
-        tekst. Nic nie znaczący tekst.
-    </p>
-
-
-    <h2>Nagłówek2</h2>
-    <p>
-        Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący
-        tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst.
-    </p>
-    <p>
-        Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący
-        tekst. Nic nie znaczący tekst. Nic nie znaczący tekst.
-    </p>
-    <p>
-        Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący tekst. Nic nie znaczący
-        tekst. Nic nie znaczący tekst. Nic nie znaczący tekst.
-    </p>
+    <?php require_once 'partials/registerForm.html.php'; ?>
 
 </div>
 
@@ -104,13 +101,6 @@
 <li><a href="#">Kategoria3</a></li>
 <li><a href="#">Kategoria4</a></li>
 </ul>-->
-
-
-<div id="footer">
-
-    <center>Stopka</center>
-
-</div>
 
 </body>
 </html>
